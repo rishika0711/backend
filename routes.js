@@ -61,4 +61,28 @@ router.post('/',(req , res) => {
 //         });
 //     });
 
+// Query parameter
+
+// router.get('/:id',(req, res) => {
+//             console.log(`this is the value - ${req.params.id}`);
+//             console.log(`this is the value - ${req.query.status}`);
+//             res.send({
+//                // name:'hello', rts = router;
+//                 name:'rihika',
+//                 class:'tets',
+//             });
+//         });
+
+router.get('/:id',(req, res) => {
+            console.log(`this is the value - ${req.params.id}`);
+            console.log(`this is the value - ${req.query.page} & ${req.query.limit} `);
+            res.send({
+               // name:'hello', rts = router;
+                name:'rihika',
+                class:'tets',
+            });
+        });
+
+
+
 module.exports = router; 
