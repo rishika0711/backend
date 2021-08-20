@@ -9,6 +9,7 @@ const router = express.Router();
 // });
 
 router.post('/',(req , res) => {
+    console.log('Body',req.body);
     res.send(" put hello");
 });
 
@@ -86,3 +87,10 @@ router.get('/:id',(req, res) => {
 
 
 module.exports = router; 
+
+// Middleware
+// 1.between req an res
+// 2.it can manipulet the req
+// 3.it can manipulet the res
+// 4.execute any logical Code
+//5.end the req and res cycle

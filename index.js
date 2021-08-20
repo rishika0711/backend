@@ -12,7 +12,20 @@ const route = require('./routes');
 // app.put('/',(req , res) => {
 //     res.send(" put hello");
 // });
+
+//parsing the application json request type
+app.use(express.json());
+
+const middleware = (req,res,next)=>{
+    console.log('Logging the value');
+    next(); 
+}
+app.use(middleware);
+
 app.use('/api/',route);
+app.use('/static/',express.static('public'));
+app.use('/images/',express.static('public/images'));
+
 //app.use('/',route);
 
 // this *  is use to print the msg when user try to call api which not deine in sytem
